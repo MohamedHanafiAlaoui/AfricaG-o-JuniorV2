@@ -147,7 +147,6 @@
             </div>
         </div>
     </main>
-    
     <div class="container-eg-btn-3">
     <a href="Admin.php"><button class="button button-7 Admin"> Administrateur</button></a>
     <a href="Utilis.php"><button class="button button-7 Utilis">Utilisateur</button></a>

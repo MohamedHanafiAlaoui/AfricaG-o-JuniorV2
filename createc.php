@@ -6,7 +6,7 @@
     <title>Tailwind Registration Template</title>
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
-
+    <link rel="stylesheet" href="styles.css">
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
        <style>
@@ -18,9 +18,9 @@
     </style>
 </head>
 <body class="bg-white font-family-karla h-screen">
-
+        
     <div class="w-full flex flex-wrap">
-
+  
         <!-- Registration Section -->
         <div class="w-full md:w-1/2 flex flex-col">
 

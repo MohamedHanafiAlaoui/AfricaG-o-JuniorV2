@@ -26,26 +26,26 @@
 
             <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
                 <p class="text-center text-3xl ">Create an Account</p>
-                <form class="flex flex-col pt-3 md:pt-8" onsubmit="event.preventDefault();">
+                <form action="logincon.php" method="POST" class="flex flex-col pt-3 md:pt-8">
                     
                     <div class="flex flex-col pt-4">
                         <label for="first name" class="text-lg"> First name</label>
-                        <input type="text" id="first name" placeholder="first name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                        <input type="text"  name="first-name" id="first name" placeholder="first name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="flex flex-col pt-4">
                         <label for="Last name" class="text-lg">Last name</label>
-                        <input type="text" id="Last name" placeholder="Last name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                        <input type="text" name="Last-name" id="Last name" placeholder="Last name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="flex flex-col pt-4">
                         <label for="email" class="text-lg">Email</label>
-                        <input type="email" id="email" placeholder="your@email.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                        <input type="email" name="email" id="email" placeholder="your@email.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
                     <div class="flex flex-col pt-4">
                         <label for="password" class="text-lg">Password</label>
-                        <input type="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                        <input type="password" name="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
                     </div>
 
-                    <input type="submit" value="Create Account" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
+                    <input type="submit" value="Create Account" name="submit" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
                 </form>
                 <div class="text-center pt-12 pb-12">
                     <p>Already have an account? <a href="index.php" class="underline font-semibold">Login here.</a></p>
@@ -56,7 +56,7 @@
 
         <!-- Image Section -->
         <div class="w-1/2 shadow-2xl ">
-            <img class="object-cover w-full h-screen  md:block" src="img_page/f56d38c3-44b2-4ba9-928e-aed40c05add4.jpeg">
+            <img class="object-cover w-full h-screen  md:block" src="front_and/img_page/f56d38c3-44b2-4ba9-928e-aed40c05add4.jpeg">
         </div>
     </div>
 

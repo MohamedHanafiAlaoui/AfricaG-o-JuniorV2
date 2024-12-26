@@ -4,7 +4,7 @@ class Controller
 {
    protected  $servername = "localhost";
    protected $username = "root";
-   protected $password = "1234";
+   protected $password = "";
    protected $dbname = "AfricaV2";
    public $conn;
   

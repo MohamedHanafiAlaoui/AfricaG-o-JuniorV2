@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Login Template</title>
-    <meta name="author" content="David Grzyb">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="front_and/styles.css">
-    <!-- Tailwind -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-   
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Africa - Explore the Continent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for blue accents */
+    .btn-primary {
+      background-color: #007BFF; /* Bright blue color */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3; /* Darker blue for hover effect */
+    }
 
-        .font-family-karla {
-            font-family: karla;
-        }
-       
-    </style>
+    /* Header and footer blue shades */
+    header {
+      background-color: #1E40AF; /* Strong blue shade */
+    }
+    footer {
+      background-color: #3B82F6; /* Light blue shade */
+    }
+
+    /* Custom Blue Section */
+    .blue-section {
+      background-color: #1E40AF;
+      padding: 50px 0;
+      text-align: center;
+      perspective: 1500px; /* Gives depth to the container */
+    }
+
+    .blue-section  {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+      transform: rotateY(20deg) rotateX(10deg); /* Adds 3D rotation */
+      transition: transform 0.5s ease; /* Smooth transition for 3D effect */
+    }
+
+    .blue-section  {
+      transform: rotateY(0deg) rotateX(0deg) scale(1.05); /* 3D effect on hover */
+    }
+
+    /* 3D hover effect for cards */
+    .country-card {
+      perspective: 1000px; /* Create 3D perspective for the card */
+    }
+
+    .country-card .card {
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+
+    .country-card:hover .card {
+      transform: rotateY(15deg) rotateX(10deg); /* Card rotation on hover */
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+
+  </style>
 </head>
-<body class="bg-white font-family-karla h-screen">
+<body class="bg-gray-100 text-gray-900">
 
-    <div class="w-full flex flex-wrap">
-
-        <!-- Login Section -->
-        <div class="w-full md:w-1/2 flex flex-col">
-
-            <div class="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24 ">
-            <svg class="svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" text-rendering="geometricPrecision" fill-rule="evenodd" xml:space="preserve" shape-rendering="geometricPrecision" clip-rule="evenodd" image-rendering="optimizeQuality" viewBox="0 0 182.954 159.276">
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#" class="text-white text-2xl font-bold">World Explorer</a>
+      <svg style="width:3rem" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" text-rendering="geometricPrecision" fill-rule="evenodd" xml:space="preserve" shape-rendering="geometricPrecision" clip-rule="evenodd" image-rendering="optimizeQuality" viewBox="0 0 182.954 159.276">
  <g id="Capa_x0020_1">
   <g id="_66472368">
     <path id="_64559656" d="m96.605 94.362l25.022-17.302v-40.431h-1.735l-23.288 14.788c-2.133 1.353-7.0037 1.3689-9.1366 0l-23.288-14.788h-1.735v40.431l25.022 17.302c2.0215 1.3848 7.0992 1.4008 9.1366 0z" fill="#1A181C"/>
@@ -58,35 +109,98 @@
   </g>
 
 <metadata><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/><dc:publisher><cc:Agent rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title>logo school</dc:title><dc:date>2010-05-08T12:08:56</dc:date><dc:description>clip art, clipart, emblem, logo, school, shield, </dc:description><dc:source>http://openclipart.org/detail/59263/logo-school-by-jantonalcor</dc:source><dc:creator><cc:Agent><dc:title>jantonalcor</dc:title></cc:Agent></dc:creator><dc:subject><rdf:Bag><rdf:li>clip art</rdf:li><rdf:li>clipart</rdf:li><rdf:li>emblem</rdf:li><rdf:li>logo</rdf:li><rdf:li>school</rdf:li><rdf:li>shield</rdf:li></rdf:Bag></dc:subject></cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/><cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/><cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/></cc:License></rdf:RDF></metadata></svg>
-            </div>
-
-            <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                <p class="text-center text-3xl">Welcome.</p>
-                <form action="checklogin.php" method="POST" class="flex flex-col pt-3 md:pt-8" >
-                    <div class="flex flex-col pt-4">
-                        <label for="email" class="text-lg">Email</label>
-                        <input type="email" name="email" id="email" placeholder="your@email.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
-                    </div>
-    
-                    <div class="flex flex-col pt-4">
-                        <label for="password" class="text-lg">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
-                    </div>
-    
-                    <input type="submit" name="submit" value="Log In" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
-                </form>
-                <div class="text-center pt-12 pb-12">
-                    <p>Don't have an account? <a href="createc.php" class="underline font-semibold">Register here.</a></p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Image Section -->
-        <div class="w-1/2 shadow-2xl">
-            <img class="object-cover w-full h-screen hidden md:block" src="front_and/img_page/f56d38c3-44b2-4ba9-928e-aed40c05add4.jpeg">
-        </div>
+  
     </div>
+  </nav>
+
+
+
+  <!-- Blue Section with Image -->
+  <div class="flex m-16">
+    <img class="w-96" src="img_page/246.jpg" alt="Aesthetic World Image">
+    <p class="ml-4 text-lg font-serif text-gray-800">
+      The world, in its infinite beauty, dances with a harmony that transcends the ordinary. Every sunset spills
+      golden light across vast oceans, and the mountains, draped in velvet greens, stand as silent sentinels to
+      time. A symphony of colors blends with the rhythm of the seasons, each moment unfolding with grace, from the
+      gentle whispers of the breeze to the profound stillness of a star-filled night. The aesthetic of the world lies
+      in its balance, its imperfections, and its quiet ability to awaken the soul. There is beauty in the smallest
+      things—the delicate petals of a flower, the soft rustle of leaves, the tender touch of raindrops on a window.
+      Together, these details weave an intricate tapestry of wonder, reminding us that the world itself is a living
+      piece of art, ever-changing and ever awe-inspiring.
+    </p>
+  </div>
+
+
+
+  <!-- Main Content Section -->
+  <div class="container mx-auto px-6 py-12">
+
+    <!-- Grid of Countries or Regions -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+      <!-- Country Card 1 with 3D effect -->
+      <div class="country-card">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800">Kenya</h3>
+            <p class="text-gray-600 mt-2">Capital: Nairobi</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Country Card 2 with 3D effect -->
+      <div class="country-card">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800">Nigeria</h3>
+            <p class="text-gray-600 mt-2">Capital: Abuja</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Nigeria</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Country Card 3 with 3D effect -->
+      <div class="country-card">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800">South Africa</h3>
+            <p class="text-gray-600 mt-2">Capital: Pretoria</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore South Africa</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Country Card 4 with 3D effect -->
+      <div class="country-card">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x250" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800">Egypt</h3>
+            <p class="text-gray-600 mt-2">Capital: Cairo</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Egypt</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- More Content / Sections (optional) -->
+    <div class="mt-16 text-center">
+      <a href="#" class="btn-primary">Learn More About Africa</a>
+    </div>
+
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="text-white py-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2024 World Explorer. All Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>

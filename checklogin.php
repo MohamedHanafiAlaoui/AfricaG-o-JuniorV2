@@ -12,7 +12,7 @@ class User {
     }
 
     public function setEmail($email) {
-        $this->email = $email; // No need to use mysqli_real_escape_string with prepared statements
+        $this->email = $email; 
     }
 
     public function setPassword($password) {
@@ -20,12 +20,12 @@ class User {
     }
 
     public function authenticate() {
-        // Prepare the SQL query
+      
         $stmt = $this->conn->prepare("SELECT  Email, Password, id_role FROM `user` WHERE Email = :email");
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->execute();
 
-        // Fetch the result as an associative array
+       
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($row) {
@@ -61,7 +61,7 @@ class Auth {
             $this->redirectBasedOnRole($user_data['role_id']);
         } else {
             $_SESSION['error'] = 'Invalid email or password';
-            header('Location: login.php'); // Redirect to login page with an error message
+            header('Location: login.php');
             exit;
         }
     }
@@ -77,7 +77,7 @@ class Auth {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email']) && isset($_POST['password'])) {
-    $db = new Controller(); // Assuming the Controller class handles the DB connection
+    $db = new Controller();
     $user = new User($db);
     $auth = new Auth($user);
     $auth->login($_POST['email'], $_POST['password']);

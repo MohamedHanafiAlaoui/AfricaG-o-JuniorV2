@@ -60,3 +60,4 @@ ALTER TABLE User ADD FOREIGN KEY (id_role) REFERENCES Role(id_role);
 
 
  ALTER TABLE User RENAME id TO id_user;
+ALTER TABLE continent ADD Image VARCHAR(255);

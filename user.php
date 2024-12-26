@@ -48,7 +48,7 @@
       transform: rotateY(0deg) rotateX(0deg) scale(1.05); /* 3D effect on hover */
     }
 
-    /* 3D hover effect for cards */
+  
     .country-card {
       perspective: 1000px; /* Create 3D perspective for the card */
     }
@@ -117,7 +117,7 @@
 
   <!-- Blue Section with Image -->
   <div class="flex m-16">
-    <img class="w-96" src="img_page/246.jpg" alt="Aesthetic World Image">
+    <img class="w-96" src="front_and/img_page/246.jpg" alt="Aesthetic World Image">
     <p class="ml-4 text-lg font-serif text-gray-800">
       The world, in its infinite beauty, dances with a harmony that transcends the ordinary. Every sunset spills
       golden light across vast oceans, and the mountains, draped in velvet greens, stand as silent sentinels to
@@ -190,7 +190,7 @@
 
     <!-- More Content / Sections (optional) -->
     <div class="mt-16 text-center">
-      <a href="#" class="btn-primary">Learn More About Africa</a>
+      <a href="formaddcontinent.php" class="btn-primary">add africa</a>
     </div>
 
   </div>

@@ -18,21 +18,21 @@
             </div>
 
             <ul class="hidden md:flex space-x-8">
-                <li><a href="index.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Home</a></li>
-                <li><a href="Admin.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Administrateur</a></li>
-                <li><a href="Utilis.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Utilisateur</a></li>
+                <li><a href="index.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Africa</a></li>
+                <li><a href="Admin.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Login</a></li>
+                <li><a href="Utilis.php" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Create Account</a></li>
             </ul>
 
         <div id="mobile-menu" class="md:hidden hidden bg-[#C27D27]">
             <ul class="space-y-4 py-4 px-6">
-                <li><a href="#home" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Home</a></li>
-                <li><a href="#about" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">About</a></li>
-                <li><a href="#services" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Services</a></li>
+                <li><a href="#home" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Africa</a></li>
+                <li><a href="#about" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Login</a></li>
+                <li><a href="#services" class="text-white text-lg font-medium uppercase hover:text-[#F1C40F] transition duration-300">Create Account</a></li>
             </ul>
         </div>
     </nav>
 
-     <section>
+    <section>
         <div class="w-[100%] h-[400px] bg-[#0c0707] carousel-promotion flex max-md:h-[700px] max-md:w-[768px]">
             <img src="img_page/img-1.jpg" alt=""
                 class="w-[100%] h-[100%] carousel-item opacity-40 transition-all duration-500" />
@@ -147,11 +147,7 @@
             </div>
         </div>
     </main>
-    
-    <div class="container-eg-btn-3">
-    <a href="Admin.php"><button class="button button-7 Admin"> Administrateur</button></a>
-    <a href="Utilis.php"><button class="button button-7 Utilis">Utilisateur</button></a>
-      </div>
+   
     <footer class="bg-[#6B3E26] text-white text-center py-4">
         <p>&copy; 2024 Explore Africa | All Rights Reserved</p>
     </footer>

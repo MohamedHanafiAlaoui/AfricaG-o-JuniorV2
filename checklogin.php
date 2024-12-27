@@ -58,6 +58,7 @@ class Auth {
         if ($user_data && password_verify($input_password, $user_data['hashed_pass'])) {
             $_SESSION['email'] = $user_data['email'];
             $_SESSION['user_id'] = $user_data['id'];
+            $_SESSION['role_id'] = $user_data['role_id'];
             
             $this->redirectBasedOnRole($user_data['role_id']);
         } else {

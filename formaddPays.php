@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('Continent.php');
 $continentObj = new Continent();
 $continents = $continentObj->getAllContinents();

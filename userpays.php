@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('pays.php');
 
 $continentObj = new pays();

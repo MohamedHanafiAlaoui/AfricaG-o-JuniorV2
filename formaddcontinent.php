@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('add_continent.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

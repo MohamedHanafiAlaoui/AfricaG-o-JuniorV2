@@ -121,6 +121,8 @@ $continents = $continentObj->getAllVille();
 <metadata><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/><dc:publisher><cc:Agent rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title>logo school</dc:title><dc:date>2010-05-08T12:08:56</dc:date><dc:description>clip art, clipart, emblem, logo, school, shield, </dc:description><dc:source>http://openclipart.org/detail/59263/logo-school-by-jantonalcor</dc:source><dc:creator><cc:Agent><dc:title>jantonalcor</dc:title></cc:Agent></dc:creator><dc:subject><rdf:Bag><rdf:li>clip art</rdf:li><rdf:li>clipart</rdf:li><rdf:li>emblem</rdf:li><rdf:li>logo</rdf:li><rdf:li>school</rdf:li><rdf:li>shield</rdf:li></rdf:Bag></dc:subject></cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/><cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/><cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/></cc:License></rdf:RDF></metadata></svg>
   
     </div>
+    <?php
+    ?>
   </nav>
 
 
@@ -142,11 +144,19 @@ $continents = $continentObj->getAllVille();
       <!-- <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['langues']); ?></p> -->
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['description']); ?></p>
       <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
-      <div style=" display: flex;
+      <?php
+      if ((isset($_SESSION["id"]) )&&  ($_SESSION['role_id'] == 1)) {
+        ?>
+              <div style=" display: flex;
     justify-content: space-evenly; margin-top:20px;">
         <a href="editVille.php?id=<?= $continent['id_ville'];?>" style="color:green;">Edit</a>
         <a href="deleteVille.php?id=<?= $continent['id_ville'];?>" style="color:red;">delet</a>
       </div>
+      <?php
+      }
+
+      ?>
+
     </div>
   </div>
 </div>
@@ -156,10 +166,16 @@ $continents = $continentObj->getAllVille();
     </div>
 
     <!-- More Content / Sections (optional) -->
+     <?php
+     echo $_SESSION['role_id'];
+     if ($_SESSION['role_id'] == 1) {
+      ?>
     <div class="mt-16 text-center">
       <a href="./formaddVille.php" class="btn-primary">add africa</a>
     </div>
-
+    <?php
+     }
+     ?>
   </div>
 
   <!-- Footer Section -->

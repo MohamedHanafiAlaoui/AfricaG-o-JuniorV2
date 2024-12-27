@@ -122,24 +122,6 @@ $continents = $continentObj->getAllContinents();
   </nav>
 
 
-
-  <!-- Blue Section with Image -->
-  <div class="flex m-16">
-    <img class="w-96" src="front_and/img_page/246.jpg" alt="Aesthetic World Image">
-    <p class="ml-4 text-lg font-serif text-gray-800">
-      The world, in its infinite beauty, dances with a harmony that transcends the ordinary. Every sunset spills
-      golden light across vast oceans, and the mountains, draped in velvet greens, stand as silent sentinels to
-      time. A symphony of colors blends with the rhythm of the seasons, each moment unfolding with grace, from the
-      gentle whispers of the breeze to the profound stillness of a star-filled night. The aesthetic of the world lies
-      in its balance, its imperfections, and its quiet ability to awaken the soul. There is beauty in the smallest
-      things—the delicate petals of a flower, the soft rustle of leaves, the tender touch of raindrops on a window.
-      Together, these details weave an intricate tapestry of wonder, reminding us that the world itself is a living
-      piece of art, ever-changing and ever awe-inspiring.
-    </p>
-  </div>
-
-
-
   <!-- Main Content Section -->
   <div class="container mx-auto px-6 py-12">
 
@@ -147,18 +129,18 @@ $continents = $continentObj->getAllContinents();
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
       <!-- Country Card 1 with 3D effect -->
-      <?php foreach ($continents as $continent): ?>
+      
       <div class="country-card">
         <div class="card">
-          <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <img src="" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
           <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800"><?= htmlspecialchars($continent['name']); ?></h3>
-            <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['Nombre_pays']); ?></p>
+            <h3 class="text-2xl font-semibold text-gray-800">hshs</h3>
+            <p class="text-gray-600 mt-2">djdj</p>
             <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
           </div>
         </div>
       </div>
-      <?php endforeach; ?>
+  
   
     </div>
 

@@ -28,10 +28,10 @@ class pays {
 
             $stmt = $this->connection->prepare($query);
 
-          
+        
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-          
+        
             if ($stmt->execute()) {
                 echo "valid";
             } else {
@@ -41,5 +41,27 @@ class pays {
             echo "erour" . $e->getMessage();
         }
     }
+    // public function editPays($id, $name, $population, $capital) {
+    //     try {
+        
+    //         $query = "UPDATE pays SET name = :name, population = :population, capital = :capital WHERE id_pays = :id";
+    //         $stmt = $this->connection->prepare($query);
+
+        
+    //         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    //         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    //         $stmt->bindParam(':population', $population, PDO::PARAM_INT);
+    //         $stmt->bindParam(':capital', $capital, PDO::PARAM_STR);
+
+    //         // Execute the statement and return an appropriate response
+    //         if ($stmt->execute()) {
+    //             return ['status' => 'success', 'message' => 'Record successfully updated.'];
+    //         } else {
+    //             return ['status' => 'error', 'message' => 'Failed to update the record.'];
+    //         }
+    //     } catch (PDOException $e) {
+    //         return ['status' => 'error', 'message' => 'An error occurred: ' . $e->getMessage()];
+    //     }
+    // }
 }
 ?>

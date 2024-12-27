@@ -55,4 +55,6 @@ class Continents {
             return null;
         }
     }
+
 }
+header('Location: userpays.php');

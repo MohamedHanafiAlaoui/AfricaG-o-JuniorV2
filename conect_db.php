@@ -31,7 +31,7 @@ class Controller
 $db = new Controller();
 
 if($db->connect()){
-  echo "connect";
+  // echo "connect";
 }else{
   echo "pas Connction";
 }

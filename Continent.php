@@ -21,5 +21,24 @@ class Continent {
             return [];
         }
     }
+    public function deletecontinent($id) {
+        try {
+            $query = "DELETE FROM continent WHERE id_continent = :id"; 
+
+            $stmt = $this->connection->prepare($query);
+
+        
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        
+            if ($stmt->execute()) {
+                echo "valid";
+            } else {
+                echo "invalid";
+            }
+        } catch (PDOException $e) {
+            echo "erour" . $e->getMessage();
+        }
+    }
 }
 ?>

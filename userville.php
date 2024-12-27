@@ -1,9 +1,9 @@
 <?php
-include('Continent.php');
+include('Ville.php');
 
-$continentObj = new Continent();
+$continentObj = new Ville();
 
-$continents = $continentObj->getAllContinents();
+$continents = $continentObj->getAllVille();
 ?>
 
 <!DOCTYPE html>
@@ -130,23 +130,32 @@ $continents = $continentObj->getAllContinents();
 
       <!-- Country Card 1 with 3D effect -->
       
-      <div class="country-card">
-        <div class="card">
-          <img src="" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800">hshs</h3>
-            <p class="text-gray-600 mt-2">djdj</p>
-            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
-          </div>
-        </div>
+      <?php foreach ($continents as $continent): ?>
+<div class="country-card">
+  <div class="card">
+    <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+    <div class="p-6">
+      <h3 class="text-2xl font-semibold text-gray-800"><?= htmlspecialchars($continent['name']); ?></h3>
+      <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['type_Ville']); ?></p>
+      <!-- <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['langues']); ?></p> -->
+      <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['description']); ?></p>
+      <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
+      <div style=" display: flex;
+    justify-content: space-evenly; margin-top:20px;">
+        <a href="editVille.php?id=<?= $continent['id_ville'];?>" style="color:green;">Edit</a>
+        <a href="deleteVille.php?id=<?= $continent['id_ville'];?>" style="color:red;">delet</a>
       </div>
+    </div>
+  </div>
+</div>
+<?php endforeach; ?>
   
   
     </div>
 
     <!-- More Content / Sections (optional) -->
     <div class="mt-16 text-center">
-      <a href="formaddcontinent.php" class="btn-primary">add africa</a>
+      <a href="./formaddVille.php" class="btn-primary">add africa</a>
     </div>
 
   </div>

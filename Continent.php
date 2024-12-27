@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('conect_db.php');
 class Continent {
     private $db;

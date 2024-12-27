@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // include('conect_db.php');
 require('pays.php');
 $continentObj = new pays();

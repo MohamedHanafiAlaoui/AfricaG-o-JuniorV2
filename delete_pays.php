@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require('pays.php');
 
 if (isset($_GET['id'])) {

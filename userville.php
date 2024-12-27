@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('Ville.php');
 
 $continentObj = new Ville();

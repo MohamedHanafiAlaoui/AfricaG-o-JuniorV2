@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include('conect_db.php');
 
 class pays {
@@ -24,7 +26,7 @@ class pays {
 
     public function deletepays($id) {
         try {
-            $query = "DELETE FROM pays WHERE id_pays = :id"; 
+            $query = "DELETE FROM Pays WHERE id_pays = :id"; 
 
             $stmt = $this->connection->prepare($query);
 

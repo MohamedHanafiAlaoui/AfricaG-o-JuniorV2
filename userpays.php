@@ -116,7 +116,8 @@ $continents = $continentObj->getAllContinents();
     <path id="1" d="m59.029 107.15c10.403 6.1045 25.578 10.984 43.698 11.005 32.693 0.27948 52.361 7.4371 64.054 15.326 0.21494-3.654-2.042-6.2549-6.8997-8.7698 4.3848-4.8793 11.242-3.1812 18.055-3.826-9.4576-3.5681-40.13-9.1782-56.681-12.961-5.8251-1.3327-14.874-2.0635-30.092-3.9335-21.172-0.73079-42.215-16.895-42.215-42.237 0-25.965 20.119-43.72 43.72-43.72s42.602 17.54 42.602 43.72c0 20.441-12.789 34.735-28.717 40.023 8.8342 1.5046 16.25 3.9119 21.559 4.8147 12.617-10.425 21.237-27.276 21.237-44.838 0-31.232-25.45-57.584-56.681-57.584-31.232 0-58.229 26.352-58.229 57.584 0 18.528 10.511 35.058 24.59 45.396zm-1.1823 3.826c-14.573 3.8905-28.244 5.3091-44.558 12.854 5.8465 0 2.5149-0.40843 17.239-1.4617-2.9232 4.1485-6.6418 2.5363-12.66 10.446 21.538-12.359 49.803-12.488 64.87-14.036-8.2969-1.4617-15.046-3.5896-24.891-7.8025z" fill="#FEFEFE"/>
   </g>
 
-<metadata><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/><dc:publisher><cc:Agent rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title>logo school</dc:title><dc:date>2010-05-08T12:08:56</dc:date><dc:description>clip art, clipart, emblem, logo, school, shield, </dc:description><dc:source>http://openclipart.org/detail/59263/logo-school-by-jantonalcor</dc:source><dc:creator><cc:Agent><dc:title>jantonalcor</dc:title></cc:Agent></dc:creator><dc:subject><rdf:Bag><rdf:li>clip art</rdf:li><rdf:li>clipart</rdf:li><rdf:li>emblem</rdf:li><rdf:li>logo</rdf:li><rdf:li>school</rdf:li><rdf:li>shield</rdf:li></rdf:Bag></dc:subject></cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/><cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/><cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/></cc:License></rdf:RDF></metadata></svg>
+<metadata><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/><dc:publisher><cc:Agent rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title>logo school</dc:title><dc:date>2010-05-08T12:08:56</dc:date><dc:description>clip art, clipart, emblem, logo, school, shield, </dc:description><dc:source>http://openclipart.org/detail/59263/logo-school-by-jantonalcor</dc:source><dc:creator><cc:Agent><dc:title>jantonalcor</dc:title></cc:Agent></dc:creator><dc:subject><rdf:Bag><rdf:li>clip art</rdf:li><rdf:li>clipart</rdf:li><rdf:li>emblem</rdf:li><rdf:li>logo</rdf:li><rdf:li>school</rdf:li><rdf:li>shield</rdf:li></rdf:Bag></dc:subject></cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/><cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/><cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/></cc:License></rdf:RDF></metadata>
+</svg>
   
     </div>
   </nav>
@@ -139,8 +140,15 @@ $continents = $continentObj->getAllContinents();
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['langues']); ?></p>
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['description']); ?></p>
       <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
+      <!--delete and edite-->
+      <div class="flex gap-4 mt-4">
+                
+                  <a href="edit_pays.php?id=<?= $continent['id_pays'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
+                  <a href="delete_pays.php?id=<?= $continent['id_pays'];?>" class="text-red-500 hover:text-red-600">Delete</a>
+
     </div>
   </div>
+
 </div>
 <?php endforeach; ?>
 

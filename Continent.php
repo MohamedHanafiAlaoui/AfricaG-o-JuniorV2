@@ -12,7 +12,7 @@ class Continent {
     // Method to fetch all continents
     public function getAllContinents() {
         try {
-            $query = "SELECT * FROM continent"; 
+            $query = "SELECT * FROM continent";
             $stmt = $this->connection->prepare($query);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);

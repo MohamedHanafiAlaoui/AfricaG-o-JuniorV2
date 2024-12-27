@@ -71,7 +71,7 @@ class pays {
             $stmt->execute([$name, $population, $image, $id]);
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
-
+>>>>>>> hamza
         }
     }
 }

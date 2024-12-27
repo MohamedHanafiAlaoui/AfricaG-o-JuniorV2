@@ -52,8 +52,7 @@ class pays {
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             return [];
-        }
-    }
+=======
     public function getContinentById($id) {
         try {
             $stmt = $this->connection->prepare("SELECT * FROM pays WHERE id_pays = ?");
@@ -71,7 +70,7 @@ class pays {
             $stmt->execute([$name, $population, $image, $id]);
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
-
+>>>>>>> hamza
         }
     }
 }

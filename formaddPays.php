@@ -5,7 +5,6 @@ $continents = $continentObj->getAllContinents();
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

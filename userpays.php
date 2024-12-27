@@ -14,9 +14,9 @@ $continents = $continentObj->getAllContinents();
   <title>Africa - Explore the Continent</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom styles for blue accents */
+    /* Custom styles for black and white accents */
     .btn-primary {
-      background-color: #007BFF; /* Bright blue color */
+      background-color: #000000; /* Black color */
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
@@ -24,39 +24,30 @@ $continents = $continentObj->getAllContinents();
       transition: background-color 0.3s ease;
     }
     .btn-primary:hover {
-      background-color: #0056b3; /* Darker blue for hover effect */
+      background-color: #555555; /* Darker grey for hover effect */
     }
 
-    /* Header and footer blue shades */
+    /* Header and footer black/white shades */
     header {
-      background-color: #1E40AF; /* Strong blue shade */
+      background-color: #333333; /* Dark background for header */
     }
     footer {
-      background-color: #3B82F6; /* Light blue shade */
+      background-color: #666666; /* Lighter grey for footer */
     }
 
-    /* Custom Blue Section */
-    .blue-section {
-      background-color: #1E40AF;
+    /* Custom black-and-white Section */
+    .black-section {
+      background-color: #333333; /* Dark background */
+      color: white; /* White text */
       padding: 50px 0;
       text-align: center;
       perspective: 1500px; /* Gives depth to the container */
     }
 
-    .blue-section  {
-      max-width: 80%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 20px;
-      transform: rotateY(20deg) rotateX(10deg); /* Adds 3D rotation */
-      transition: transform 0.5s ease; /* Smooth transition for 3D effect */
-    }
-
-    .blue-section  {
+    .black-section:hover {
       transform: rotateY(0deg) rotateX(0deg) scale(1.05); /* 3D effect on hover */
     }
 
-  
     .country-card {
       perspective: 1000px; /* Create 3D perspective for the card */
     }
@@ -71,21 +62,37 @@ $continents = $continentObj->getAllContinents();
     }
 
     .card {
-      background-color: white;
+      background-color: #FFFFFF; /* White background */
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       height: 100%;
+      color: black; /* Black text for the card */
+    }
+
+    /* General text color adjustments */
+    h3 {
+      color: #333333; /* Dark text color */
+    }
+
+    p {
+      color: #555555; /* Lighter grey text */
     }
 
   </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white text-black">
 
   <!-- Navigation Bar -->
-  <nav class="bg-gray-800 p-4">
+  <nav class="bg-black p-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="#" class="text-white text-2xl font-bold">World Explorer</a>
+      <a href="#" class="text-white text-2xl font-bold">WELCOME TO COUNTRIES</a>
+      <div class="flex gap-[2rem]">
+
+        <a href="#" class="text-white text-xl font-bold">Cities</a>
+        <a href="user.php" class="text-white text-xl font-bold">Continents</a>
+        <a href="index.php" class="text-white text-xl font-bold">loge out</a>
+      </div>
       <svg style="width:3rem" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" text-rendering="geometricPrecision" fill-rule="evenodd" xml:space="preserve" shape-rendering="geometricPrecision" clip-rule="evenodd" image-rendering="optimizeQuality" viewBox="0 0 182.954 159.276">
  <g id="Capa_x0020_1">
   <g id="_66472368">
@@ -118,10 +125,8 @@ $continents = $continentObj->getAllContinents();
 
 <metadata><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/><dc:publisher><cc:Agent rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title>logo school</dc:title><dc:date>2010-05-08T12:08:56</dc:date><dc:description>clip art, clipart, emblem, logo, school, shield, </dc:description><dc:source>http://openclipart.org/detail/59263/logo-school-by-jantonalcor</dc:source><dc:creator><cc:Agent><dc:title>jantonalcor</dc:title></cc:Agent></dc:creator><dc:subject><rdf:Bag><rdf:li>clip art</rdf:li><rdf:li>clipart</rdf:li><rdf:li>emblem</rdf:li><rdf:li>logo</rdf:li><rdf:li>school</rdf:li><rdf:li>shield</rdf:li></rdf:Bag></dc:subject></cc:Work><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"><cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/><cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/><cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/></cc:License></rdf:RDF></metadata>
 </svg>
-  
     </div>
   </nav>
-
 
   <!-- Main Content Section -->
   <div class="container mx-auto px-6 py-12">
@@ -129,44 +134,37 @@ $continents = $continentObj->getAllContinents();
     <!-- Grid of Countries or Regions -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
-<!-- Country Card 1 with 3D effect -->
-<?php foreach ($continents as $continent): ?>
-<div class="country-card">
-  <div class="card">
-    <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
-    <div class="p-6">
-      <h3 class="text-2xl font-semibold text-gray-800"><?= htmlspecialchars($continent['name']); ?></h3>
-      <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['population']); ?></p>
-      <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['langues']); ?></p>
-      <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['description']); ?></p>
-      <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
-      <!--delete and edite-->
-      <div class="flex gap-4 mt-4">
+      <!-- Country Card 1 with 3D effect -->
+      <?php foreach ($continents as $continent): ?>
+        <div class="country-card">
+          <div class="card">
+            <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold"><?= htmlspecialchars($continent['name']); ?></h3>
+              <p class="mt-2"><?= htmlspecialchars($continent['population']); ?></p>
+              <p class="mt-2"><?= htmlspecialchars($continent['langues']); ?></p>
+              <p class="mt-2"><?= htmlspecialchars($continent['description']); ?></p>
+              <!--delete and edit-->
+              <div class="flex gap-4 mt-4">
                 
-                  <a href="edit_pays.php?id=<?= $continent['id_pays'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
-                  <a href="delete_pays.php?id=<?= $continent['id_pays'];?>" class="text-red-500 hover:text-red-600">Delete</a>
+                <a href="edit_pay.php?id=<?= $continent['id_pays'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
+                <a href="delete_pays.php?id=<?= $continent['id_pays'];?>" class="text-red-500 hover:text-red-600">Delete</a>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
-  </div>
-
-</div>
-<?php endforeach; ?>
-
-</div>
-
     <!-- More Content / Sections (optional) -->
-    <div class="mt-16 text-center">
-      <a href="formaddPays.php" class="btn-primary">add africa</a>
-    </div>
-
+<div class="mt-16 text-center">
+<a href="formaddPays.php" class="btn-primary">add africa</a>
+</div>
   </div>
 
   <!-- Footer Section -->
-  <footer class="text-white py-6">
-    <div class="max-w-7xl mx-auto text-center">
-      <p>&copy; 2024 World Explorer. All Rights Reserved.</p>
-    </div>
+  <footer class="text-center py-6">
+    <p class="text-white">&copy; 2024 World Explorer. All rights reserved.</p>
   </footer>
-
 </body>
 </html>

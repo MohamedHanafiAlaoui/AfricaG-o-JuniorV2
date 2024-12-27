@@ -41,5 +41,17 @@ class pays {
             echo "erour" . $e->getMessage();
         }
     }
+    public function getoneVille($id) {
+        try {
+            $query = "SELECT * FROM Ville Where id_ville =:id "; 
+            $stmt = $this->connection->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+            return [];
+        }
+    }
 }
 ?>

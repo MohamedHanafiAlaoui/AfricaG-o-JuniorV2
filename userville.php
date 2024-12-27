@@ -1,9 +1,9 @@
 <?php
-include('Continent.php');
+include('Ville.php');
 
-$continentObj = new Continent();
+$continentObj = new Ville();
 
-$continents = $continentObj->getAllContinents();
+$continents = $continentObj->getAllVille();
 ?>
 
 <!DOCTYPE html>
@@ -130,14 +130,23 @@ $continents = $continentObj->getAllContinents();
 
       <!-- Country Card 1 with 3D effect -->
       
-
+      <div class="country-card">
+        <div class="card">
+          <img src="" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800">hshs</h3>
+            <p class="text-gray-600 mt-2">djdj</p>
+            <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
+          </div>
+        </div>
+      </div>
   
   
     </div>
 
     <!-- More Content / Sections (optional) -->
     <div class="mt-16 text-center">
-      <a href="formaddcontinent.php" class="btn-primary">add africa</a>
+      <a href="./formaddVille.php" class="btn-primary">add africa</a>
     </div>
 
   </div>

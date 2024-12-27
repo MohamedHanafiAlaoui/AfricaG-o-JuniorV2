@@ -1,7 +1,23 @@
 <?php
 include('conect_db.php');  
 
-class Continent {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $langues = $_POST['langues']; 
+    $Image = $_POST['Image']; 
+    $population=$_POST['population'];
+    $id_continent=$_POST['continent'];
+
+    $continent = new Continents();
+    if ($continent->addContinent($name, $population, $langues,$description,$Image,$id_continent)) {
+        // echo "Continent added successfully!";
+    } else {
+        echo "Error adding continent!";
+    }
+}
+
+class Continents {
     private $db;
     private $connection;
 
@@ -10,9 +26,9 @@ class Continent {
         $this->connection = $this->db->connect();
     }
 
-    public function addContinent($name, $population, $langues,$description,$Image) {
+    public function addContinent($name, $population, $langues,$description,$Image, $id_continent) {
         try {
-            $query = "INSERT INTO pays (name, population, langues ,description ,Image ) VALUES (:name, :population, :langues , :description, :Image)";
+            $query = "INSERT INTO pays (name, population, langues ,description ,Image ,id_continent  ) VALUES (:name, :population, :langues , :description, :Image ,:id_continent)";
             $stmt = $this->connection->prepare($query);
 
             $stmt->bindParam(':name', $name);
@@ -20,7 +36,7 @@ class Continent {
             $stmt->bindParam(':langues', $langues);
             $stmt->bindParam(':description', $description);
             $stmt->bindParam(':Image', $Image);
-
+            $stmt->bindParam(':id_continent', $id_continent);
             $stmt->execute();   
             return true;
         } catch (PDOException $e) {
@@ -28,7 +44,6 @@ class Continent {
             return false;
         }
     }
-
     public function handleFileUpload($file) {
         $targetDir = "uploads/";
         $fileName = basename($file["name"]);

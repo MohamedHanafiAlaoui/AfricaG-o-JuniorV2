@@ -1,21 +1,8 @@
 <?php
-include('add_pays.php');
+include('Continent.php');
+$continentObj = new Continent();
+$continents = $continentObj->getAllContinents();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $description = $_POST['description'];
-    $langues = $_POST['langues']; 
-    $Image = $_POST['Image']; 
-    $population=$_POST['population'];
-
-
-    $continent = new Continent();
-    if ($continent->addContinent($name, $population, $langues,$description,$Image)) {
-        // echo "Continent added successfully!";
-    } else {
-        echo "Error adding continent!";
-    }
-}
 ?>
 
 
@@ -30,14 +17,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body class="bg-gray-100">
     <div class="container mx-auto my-10 p-6 max-w-lg bg-white shadow-lg rounded-lg">
         <h1 class="text-2xl font-semibold text-center text-gray-700 mb-6">Add a New pays</h1>
-        <form action="formaddPays.php" method="POST">
+        <form action="add_pays.php" method="POST">
             <div class="mb-4">
                 <label for="name" class="block text-gray-600 font-medium mb-2">pays Name:</label>
                 <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
             </div>
             <div class="mb-4">
+            <select name="continent" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <?php 
+                    foreach($continents as $continent) :?>
+                        <option value="<?= ($continent['id_continent']); ?>"><?= htmlspecialchars($continent['name']);?></option>
+                    <?php endforeach?>
+                </select>
+            </div>
+            <div class="mb-4">
                 <label for="population" class="block text-gray-600 font-medium mb-2">population:</label>
-                <input type="text" id="population" name="population" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="number" id="population" name="population" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
             </div>
             <div class="mb-4">
                 <label for="description" class="block text-gray-600 font-medium mb-2">description:</label>

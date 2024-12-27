@@ -138,7 +138,6 @@ $continents = $continentObj->getAllContinents();
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['population']); ?></p>
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['langues']); ?></p>
       <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['description']); ?></p>
-
       <a href="#" class="text-blue-500 hover:text-blue-600 mt-4 inline-block">Explore Kenya</a>
     </div>
   </div>

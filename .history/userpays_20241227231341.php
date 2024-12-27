@@ -89,7 +89,7 @@ $continents = $continentObj->getAllContinents();
       <a href="#" class="text-white text-2xl font-bold">WELCOME TO COUNTRIES</a>
       <div class="flex gap-[2rem]">
 
-        <a href="userville.php" class="text-white text-xl font-bold">Cities</a>
+        <a href="user" class="text-white text-xl font-bold">Cities</a>
         <a href="user.php" class="text-white text-xl font-bold">Continents</a>
         <a href="index.php" class="text-white text-xl font-bold">loge out</a>
       </div>

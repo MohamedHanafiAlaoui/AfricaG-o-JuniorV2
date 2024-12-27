@@ -163,7 +163,7 @@ $continents = $continentObj->getAllContinents();
             <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['Nombre_pays']); ?></p>
               <!--delete and edit-->
               <div class="flex gap-4 mt-4">
-                <a href="edit_pays.php?id=<?= $continent['id_continent'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
+                <a href="edit_continent.php?id=<?= $continent['id_continent'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
                 <a href="delete_continent.php?id=<?= $continent['id_continent'];?>" class="text-red-500 hover:text-red-600">Delete</a>
               </div>
           </div>
@@ -178,7 +178,7 @@ $continents = $continentObj->getAllContinents();
 <a href="formaddcontinent.php" class="btn-primary">add africa</a>
 </div>
   </div>
-  
+
   <!-- Footer Section -->
   <footer class="text-center py-6">
     <p class="text-white">&copy; 2024 World Explorer. All rights reserved.</p>

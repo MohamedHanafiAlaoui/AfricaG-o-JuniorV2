@@ -8,10 +8,10 @@ if (isset($_GET['id'])) {
 
     $continentObj->deletecontinent($continentId);
 
-    header('Location: userpays.php');
+    header('Location: user.php');
     exit;
 } else {
-    header('Location: userpays.php');
+    header('Location: user.php');
     exit;
 }
 ?>

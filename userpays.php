@@ -147,7 +147,7 @@ $continents = $continentObj->getAllContinents();
               <!--delete and edit-->
               <div class="flex gap-4 mt-4">
                 
-                <a href="edit_pays.php?id=<?= $continent['id_pays'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
+                <a href="edit_pay.php?id=<?= $continent['id_pays'];?>" class="text-blue-500 hover:text-blue-600">edit</a>
                 <a href="delete_pays.php?id=<?= $continent['id_pays'];?>" class="text-red-500 hover:text-red-600">Delete</a>
 
               </div>

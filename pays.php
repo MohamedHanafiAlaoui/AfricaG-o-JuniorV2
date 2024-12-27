@@ -41,27 +41,26 @@ class pays {
             echo "erour" . $e->getMessage();
         }
     }
-    // public function editPays($id, $name, $population, $capital) {
-    //     try {
-        
-    //         $query = "UPDATE pays SET name = :name, population = :population, capital = :capital WHERE id_pays = :id";
-    //         $stmt = $this->connection->prepare($query);
+    public function getContinentById($id) {
+        try {
+            $stmt = $this->connection->prepare("SELECT * FROM pays WHERE id_pays = ?");
+            $stmt->execute([$id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC); 
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 
-        
-    //         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    //         $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    //         $stmt->bindParam(':population', $population, PDO::PARAM_INT);
-    //         $stmt->bindParam(':capital', $capital, PDO::PARAM_STR);
-
-    //         // Execute the statement and return an appropriate response
-    //         if ($stmt->execute()) {
-    //             return ['status' => 'success', 'message' => 'Record successfully updated.'];
-    //         } else {
-    //             return ['status' => 'error', 'message' => 'Failed to update the record.'];
-    //         }
-    //     } catch (PDOException $e) {
-    //         return ['status' => 'error', 'message' => 'An error occurred: ' . $e->getMessage()];
-    //     }
-    // }
+    // Update continent (again, this might be better suited for a Continent class)
+    public function updateContinent($id, $name, $population, $image) {
+        try {
+            $stmt = $this->connection->prepare("UPDATE continents SET name = ?, population = ?, Image = ? WHERE id = ?");
+            $stmt->execute([$name, $population, $image, $id]);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
 }
+?>
+
 ?>

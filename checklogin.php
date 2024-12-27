@@ -70,7 +70,7 @@ class Auth {
         if ($role_id == 1) {
             header('Location: user.php');
         } else {
-            header('Location: menuutil.php');
+            header('Location: admin.php');
         }
         exit;
     }

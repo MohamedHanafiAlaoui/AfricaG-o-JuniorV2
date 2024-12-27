@@ -1,7 +1,7 @@
 <?php
-include('pays.php');
+include('Continent.php');
 
-$continentObj = new pays();
+$continentObj = new Continent();
 
 $continents = $continentObj->getAllContinents();
 ?>
@@ -41,11 +41,11 @@ $continents = $continentObj->getAllContinents();
       color: white; /* White text */
       padding: 50px 0;
       text-align: center;
-      perspective: 1500px; 
+      perspective: 1500px; /* Gives depth to the container */
     }
 
     .black-section:hover {
-      transform: rotateY(0deg) rotateX(0deg) scale(1.05); 
+      transform: rotateY(0deg) rotateX(0deg) scale(1.05); /* 3D effect on hover */
     }
 
     .country-card {
@@ -58,11 +58,11 @@ $continents = $continentObj->getAllContinents();
     }
 
     .country-card:hover .card {
-      transform: rotateY(15deg) rotateX(10deg); 
+      transform: rotateY(15deg) rotateX(10deg); /* Card rotation on hover */
     }
 
     .card {
-      background-color: #FFFFFF; 
+      background-color: #FFFFFF; /* White background */
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -81,16 +81,16 @@ $continents = $continentObj->getAllContinents();
 
   </style>
 </head>
-<body class="bg-white text-black">
+<body class="bg-gray-100 text-gray-900">
 
   <!-- Navigation Bar -->
   <nav class="bg-black p-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="#" class="text-white text-2xl font-bold">WELCOME TO COUNTRIES</a>
+      <a href="#" class="text-white text-2xl font-bold">WELCOME TO CONTINENTS</a>
       <div class="flex gap-[2rem]">
 
         <a href="#" class="text-white text-xl font-bold">Cities</a>
-        <a href="admincon.php" class="text-white text-xl font-bold">Continents</a>
+        <a href="admin.php" class="text-white text-xl font-bold">Countries</a>
         <a href="index.php" class="text-white text-xl font-bold">loge out</a>
       </div>
       <svg style="width:3rem" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" text-rendering="geometricPrecision" fill-rule="evenodd" xml:space="preserve" shape-rendering="geometricPrecision" clip-rule="evenodd" image-rendering="optimizeQuality" viewBox="0 0 182.954 159.276">
@@ -128,6 +128,25 @@ $continents = $continentObj->getAllContinents();
     </div>
   </nav>
 
+
+
+  <!-- Blue Section with Image -->
+  <div class="flex m-16">
+    <img class="w-96" src="front_and/img_page/246.jpg" alt="Aesthetic World Image">
+    <p class="ml-4 text-lg font-serif text-gray-800">
+      The world, in its infinite beauty, dances with a harmony that transcends the ordinary. Every sunset spills
+      golden light across vast oceans, and the mountains, draped in velvet greens, stand as silent sentinels to
+      time. A symphony of colors blends with the rhythm of the seasons, each moment unfolding with grace, from the
+      gentle whispers of the breeze to the profound stillness of a star-filled night. The aesthetic of the world lies
+      in its balance, its imperfections, and its quiet ability to awaken the soul. There is beauty in the smallest
+      things—the delicate petals of a flower, the soft rustle of leaves, the tender touch of raindrops on a window.
+      Together, these details weave an intricate tapestry of wonder, reminding us that the world itself is a living
+      piece of art, ever-changing and ever awe-inspiring.
+    </p>
+  </div>
+
+
+
   <!-- Main Content Section -->
   <div class="container mx-auto px-6 py-12">
 
@@ -136,25 +155,25 @@ $continents = $continentObj->getAllContinents();
 
       <!-- Country Card 1 with 3D effect -->
       <?php foreach ($continents as $continent): ?>
-        <div class="country-card">
-          <div class="card">
-            <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold"><?= htmlspecialchars($continent['name']); ?></h3>
-              <p class="mt-2"><?= htmlspecialchars($continent['population']); ?></p>
-              <p class="mt-2"><?= htmlspecialchars($continent['langues']); ?></p>
-              <p class="mt-2"><?= htmlspecialchars($continent['description']); ?></p>
-             
-            </div>
+      <div class="country-card">
+        <div class="card">
+          <img src="<?= htmlspecialchars($continent['Image']); ?>" alt="Country Image" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-gray-800"><?= htmlspecialchars($continent['name']); ?></h3>
+            <p class="text-gray-600 mt-2"><?= htmlspecialchars($continent['Nombre_pays']); ?></p> 
           </div>
         </div>
+      </div>
       <?php endforeach; ?>
+  
     </div>
-   
+
+      
 
   <!-- Footer Section -->
   <footer class="text-center py-6">
     <p class="text-white">&copy; 2024 World Explorer. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
